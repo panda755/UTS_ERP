@@ -1,3 +1,6 @@
+<img width="1600" height="788" alt="fitur marketing" src="https://github.com/user-attachments/assets/8e0e5dcf-3f96-4a84-a993-9910d7607857" />
+<img width="1600" height="716" alt="inventory" src="https://github.com/user-attachments/assets/2778c6a9-4355-45a2-8b56-e26a82c25c99" />
+<img width="1260" height="681" alt="semua fitur " src="https://github.com/user-attachments/assets/03dfd4c4-2fe6-4d43-9849-8e7a56d23b6e" />
 <p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
 
 <p align="center">
