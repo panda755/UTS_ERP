@@ -1,58 +1,100 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+# UTS ERP - PT Neosantara Group
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+Platform *Enterprise Resource Planning* (ERP) terpadu untuk **PT Neosantara Group**, perusahaan distributor dan retail nasional. Platform ini mengintegrasikan proses bisnis dari pencarian prospek pelanggan, kampanye pemasaran, hingga pengelolaan stok barang di gudang.
 
-## About Laravel
+Dibuat untuk memenuhi Ujian Tengah Semester (UTS) mata kuliah **Pemrograman Sistem Enterprise**.
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+| | |
+|---|---|
+| Jurusan / Program Studi | Teknologi Informasi / Manajemen Informatika |
+| Mata Kuliah | P. Sistem Enterprise |
+| Dosen | Riyanto, S.Kom., M.Kom |
+| Kelas / Semester | 3 / 5 (Ganjil) |
+| Tahun Ajaran | 2026/2027 |
+| Hari / Tanggal | Rabu, 28 Oktober 2026 |
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+## Teknologi
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+- Laravel 13
+- FilamentPHP v5
+- PHP 8.3 atau lebih baru
+- SQLite (database bawaan)
 
-## Learning Laravel
+## Anggota Tim dan Pembagian Tugas
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+Setiap anggota mengerjakan satu modul sistem enterprise pada branch masing-masing, lalu digabungkan ke `main` melalui Pull Request.
 
-In addition, [Laracasts](https://laracasts.com) contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+| Anggota | Peran | Modul | Fitur yang Dikerjakan | Branch |
+|---|---|---|---|---|
+| Galih Eka Syaputra | Ketua Tim | CRM (Prospek Pelanggan) | Inisialisasi project dan repository, pemasangan Filament v5, manajemen data prospek pelanggan (Lead) beserta data contoh | `feature/crm` |
+| Pauzan | Anggota | Marketing (Kampanye Pemasaran) | Manajemen kampanye pemasaran (Campaign) beserta data contoh | `feature/marketing` |
+| Nabila | Anggota | Inventory (Stok Barang di Gudang) | Manajemen produk, pencatatan barang masuk dan keluar, laporan inventory, dan ringkasan stok di dashboard | `feature/inventory` |
 
-You can also watch bite-sized lessons with real-world projects on [Laravel Learn](https://laravel.com/learn), where you will be guided through building a Laravel application from scratch while learning PHP fundamentals.
+### Rincian Fitur per Modul
 
-## Agentic Development
+**1. CRM (Galih Eka Syaputra)**
+- Data prospek pelanggan: nama, perusahaan, kontak, sumber prospek, dan status
+- Status prospek: Baru, Dihubungi, Negosiasi, Deal, Batal
 
-Laravel's predictable structure and conventions make it ideal for AI coding agents like Claude Code, Cursor, and GitHub Copilot. Install [Laravel Boost](https://laravel.com/docs/ai) to supercharge your AI workflow:
+**2. Marketing (Pauzan)**
+- Data kampanye pemasaran: nama, channel, anggaran, periode, dan status
+- Channel: Email, Sosial Media, WhatsApp, Iklan Berbayar, Event
+
+**3. Inventory (Nabila)**
+- Produk: SKU, nama barang, kategori, harga, stok, batas minimum stok, dan satuan
+- Transaksi stok: barang masuk dan barang keluar, dengan penolakan otomatis jika stok tidak mencukupi
+- Laporan Inventory: ringkasan stok, total barang masuk dan keluar, serta riwayat transaksi dengan filter periode
+- Widget dashboard: total produk, total transaksi, dan jumlah produk dengan stok menipis
+
+## Screenshot Hasil Akhir
+
+### Modul Marketing
+
+![Modul Marketing](https://github.com/user-attachments/assets/8e0e5dcf-3f96-4a84-a993-9910d7607857)
+
+**Fitur: Manajemen Kampanye Pemasaran (Campaign)**, dikerjakan oleh Pauzan.
+
+### Modul Inventory
+
+![Modul Inventory](https://github.com/user-attachments/assets/2778c6a9-4355-45a2-8b56-e26a82c25c99)
+
+**Fitur: Manajemen Produk, Transaksi Stok, dan Laporan Inventory**, dikerjakan oleh Nabila.
+
+### Seluruh Fitur
+
+![Seluruh Fitur](https://github.com/user-attachments/assets/03dfd4c4-2fe6-4d43-9849-8e7a56d23b6e)
+
+**Fitur: Seluruh Modul ERP (CRM, Marketing, dan Inventory) dalam satu panel admin.**
+
+## Instalasi
+
+Persyaratan: PHP 8.3 atau lebih baru dan Composer.
 
 ```bash
-composer require laravel/boost --dev
-
-php artisan boost:install
+git clone https://github.com/panda755/UTS_ERP.git
+cd UTS_ERP
+composer install
+copy .env.example .env
+php artisan key:generate
+type nul > database\database.sqlite
+php artisan migrate
+php artisan db:seed --class=UserSeeder
+php artisan db:seed --class=LeadSeeder
+php artisan db:seed --class=CampaignSeeder
+php artisan serve
 ```
 
-Boost provides your agent 15+ tools and skills that help agents build Laravel applications while following best practices.
+Pengguna Linux atau macOS mengganti `copy` dengan `cp` dan `type nul >` dengan `touch`.
 
-## Contributing
+Buka `http://127.0.0.1:8000/admin` lalu login dengan akun dari `UserSeeder`:
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+- Email: `admin@example.com`
+- Password: `password123`
 
-## Code of Conduct
+Data produk dan transaksi stok pada modul Inventory diisi langsung melalui panel admin.
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+## Alur Kerja Tim
 
-## Security Vulnerabilities
-
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
-
-## License
-
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+1. Ketua menginisialisasi project Laravel dan Filament v5, membuat repository publik, lalu mengundang anggota sebagai kolaborator.
+2. Setiap anggota membuat branch fitur masing-masing: `feature/crm`, `feature/marketing`, dan `feature/inventory`.
+3. Setiap branch digabungkan ke `main` melalui Pull Request, sehingga riwayat commit tiap anggota tetap tercatat.
